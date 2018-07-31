@@ -7,7 +7,9 @@ process.stdin.on('data', (data) => {
 
   if (cmd === 'pwd') {
     //process.stdout.write(__dirname);
-    process.stdout.write(process.cwd());
+    //process.stdout.write(process.cwd());
+    const command = require('./pwd');
+    command.pwd()
   }
 
 

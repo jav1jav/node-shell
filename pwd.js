@@ -1,0 +1,1 @@
+module.exports.pwd = () => process.stdout.write('working ' + process.cwd());
