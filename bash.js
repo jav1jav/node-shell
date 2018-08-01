@@ -15,6 +15,10 @@ process.stdin.on('data', (data) => {
     commandX = require('./' + cmd.slice(0, 3));
     //console.log(cmd.slice(4));
     commandX(cmd.slice(4));
+  } else if (cmd.slice(0, 4) === 'curl') {
+    console.log('holla')
+    commandX = require('./' + cmd.slice(0, 4));
+    commandX(cmd.slice(5));
   } else {
     process.stdout.write('\nprompt > ');
   }
