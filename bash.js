@@ -10,6 +10,13 @@ process.stdin.on('data', (data) => {
   if (cmd === 'pwd' | cmd === 'ls') {
     commandX = require('./' + cmd);
     commandX();
+  } else if (cmd.slice(0, 3) === 'cat') {
+    //console.log('inside cat');
+    commandX = require('./' + cmd.slice(0, 3));
+    //console.log(cmd.slice(4));
+    commandX(cmd.slice(4));
+  } else {
+    process.stdout.write('\nprompt > ');
   }
 
 });
