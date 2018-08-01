@@ -1,3 +1,4 @@
-module.exports = () =>
-{process.stdout.write('working ' + process.cwd());
-process.stdout.write('\npwd prompt > ')};
+module.exports = () => {
+  process.stdout.write(process.cwd());
+  process.stdout.write('\nprompt > ');
+};
